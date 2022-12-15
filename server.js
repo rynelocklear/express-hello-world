@@ -1,5 +1,5 @@
 const express = require("express");
-const app = require('./app')
+const app = express()
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
@@ -43,7 +43,7 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
